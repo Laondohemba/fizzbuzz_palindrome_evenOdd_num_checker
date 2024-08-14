@@ -50,3 +50,9 @@ p {
 #result2 {
     margin: auto !important;
 }
+@media(max-width: 500px){
+    .container{
+        width: 90%;
+        height: fit-content;
+    }
+}
