@@ -55,4 +55,10 @@ p {
         width: 90%;
         height: fit-content;
     }
+    .numCont button{
+        margin: auto 5px;
+    }
+    p, #result2 {
+        margin: 20px auto !important;
+    }
 }
