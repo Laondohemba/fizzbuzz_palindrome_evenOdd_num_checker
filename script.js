@@ -22,6 +22,7 @@ document.getElementById('btn').addEventListener('click', ()=>{
         }
     }
     result.style.display = 'block';
+    num.value = "";
 })
 
 // function to store a range of nunmbers in an array
@@ -73,27 +74,29 @@ document.getElementById('OddBtn').addEventListener('click', ()=>{
 // function to check palindromes
 
 function checkPalindrome(){
-    let inputText = document.getElementById('input').value;
+    let inputText = document.getElementById('input');
 
-    let inputToLower = inputText.toLowerCase();
+    let inputToLower = inputText.value.toLowerCase();
     let splitWord = inputToLower.split("");
 
     let newWord = splitWord.reverse();
     let reverseWord = newWord.join("");
 
-    document.getElementById('reverse_spelling').innerHTML = reverseWord;
+    document.getElementById('reverse_spelling').innerHTML = "Reverse word: " + reverseWord;
     
     let palindromeResult = document.getElementById('palindrome_result');
 
     if(inputToLower.length == 0){
         palindromeResult.innerHTML = "Input the word you want to check";
     }else if(inputToLower == reverseWord) {
-        palindromeResult.innerHTML = inputText + " is a palindrome";
+        palindromeResult.innerHTML = inputText.value + " is a palindrome";
     }
     else{
-        palindromeResult.innerHTML= inputText + " is not a palindrome";
+        palindromeResult.innerHTML= inputText.value + " is not a palindrome";
     }
     palindromeResult.style.display = "block";
+    document.getElementById('reverse_spelling').style.display = "block";
+    inputText.value = "";
 }
 
 document.getElementById('palindrome_btn').addEventListener('click', ()=>{;
